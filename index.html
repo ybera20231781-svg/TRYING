@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-A-PC Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a class="logo" href="#home">🖥️ Build-A-PC <span>ARCADE</span></a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#parts">Meet the Parts</a>
+                <a href="#challenge">PC Challenge</a>
+                <a href="#quiz">Quick Quiz</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow">WELCOME, FUTURE PC BUILDER!</p>
+            <h1>Build Your Dream PC.<br><span>Don't Rage-Quit.</span></h1>
+            <p class="hero-text">
+                Pick your parts, dodge compatibility disasters, and create a computer
+                that can handle your games, schoolwork, and 37 open browser tabs.
+            </p>
+            <a class="button" href="#challenge">Start the Challenge</a>
+            <div class="hero-facts">
+                <div><strong>7</strong><span>Parts to pick</span></div>
+                <div><strong>1</strong><span>Dream PC</span></div>
+                <div><strong>0</strong><span>Actual explosions</span></div>
+            </div>
+        </section>
+
+        <section id="parts">
+            <div class="section-heading">
+                <p class="eyebrow">MEET YOUR SQUAD</p>
+                <h2>The PC Parts Hall of Fame</h2>
+                <p>Every part has a job. Yes, even the box it all goes in.</p>
+            </div>
+
+            <div class="parts-grid">
+                <article class="part-card">
+                    <div class="part-icon">🧠</div>
+                    <h3>CPU — The Brain</h3>
+                    <p>Makes the decisions and crunches instructions. Basically the teammate who actually reads the mission briefing.</p>
+                    <span class="tag">Brain power</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🕸️</div>
+                    <h3>Motherboard — The Meetup Spot</h3>
+                    <p>Connects the components so they can work together. The group chat of your PC, but with fewer arguments.</p>
+                    <span class="tag">Team connector</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">⚡</div>
+                    <h3>RAM — The Short-Term Memory</h3>
+                    <p>Keeps active apps and game data ready to use. More room means your PC can juggle more tasks at once.</p>
+                    <span class="tag">Multitasking</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🎮</div>
+                    <h3>GPU — The Artist</h3>
+                    <p>Creates the images you see in games and creative apps. Responsible for those glorious graphics settings.</p>
+                    <span class="tag">Pixels and frames</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">📦</div>
+                    <h3>Storage — The Treasure Chest</h3>
+                    <p>Keeps your games, photos, projects, and files even after shutdown. Your digital hoarding has a home.</p>
+                    <span class="tag">Save everything</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🔌</div>
+                    <h3>PSU — The Power Dealer</h3>
+                    <p>Supplies power to the system. Pick one that can handle the parts, or your dream build may not get far.</p>
+                    <span class="tag">Power up</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🧊</div>
+                    <h3>Cooler — The Chill Manager</h3>
+                    <p>Helps keep the CPU from overheating. Even computer brains need to cool off under pressure.</p>
+                    <span class="tag">Stay frosty</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🏠</div>
+                    <h3>Case — The Home Base</h3>
+                    <p>Houses and protects the parts. It needs enough space for everything to fit comfortably.</p>
+                    <span class="tag">Room to fit</span>
+                </article>
+                <article class="part-card">
+                    <div class="part-icon">🌬️</div>
+                    <h3>Case Fans — The Breeze Crew</h3>
+                    <p>Move air around the case to help carry heat away. Tiny wind machines, doing important work.</p>
+                    <span class="tag">Airflow</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="mission">
+            <p class="eyebrow">YOUR MISSION, SHOULD YOU ACCEPT IT</p>
+            <h2>Can You Build Without Breaking the Rules?</h2>
+            <p>Match the CPU to the motherboard, pair the right RAM, keep the GPU inside the case, and make sure the power supply can handle the load. Your budget is counting on you.</p>
+            <a class="button button-light" href="#challenge">I'm In!</a>
+        </section>
+
+        <section id="challenge">
+            <div class="section-heading">
+                <p class="eyebrow">THE BUILD-OFF</p>
+                <h2>Create Your Custom PC</h2>
+                <p>Choose your gear below. The total updates as you go.</p>
+            </div>
+
+            <div class="builder">
+                <div class="builder-top">
+                    <div>
+                        <h3>🛠️ The Parts Workshop</h3>
+                        <p>Choose wisely, builder.</p>
+                    </div>
+                    <div class="budget-box">
+                        <span>Build cost</span>
+                        <strong id="total">$1,410</strong>
+                    </div>
+                </div>
+
+                <div class="builder-row">
+                    <label for="cpu">🧠 CPU</label>
+                    <select id="cpu">
+                        <option value="200" data-name="AMD Ryzen 5 7600" data-socket="AM5">AMD Ryzen 5 7600 — $200 (AM5)</option>
+                        <option value="250" data-name="Intel Core i5-13600K" data-socket="LGA1700">Intel Core i5-13600K — $250 (LGA1700)</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="motherboard">🕸️ Motherboard</label>
+                    <select id="motherboard">
+                        <option value="200" data-name="MSI B650 Tomahawk" data-socket="AM5" data-ram="DDR5">MSI B650 Tomahawk — $200 (AM5 / DDR5)</option>
+                        <option value="180" data-name="Gigabyte B760M AORUS DDR4" data-socket="LGA1700" data-ram="DDR4">Gigabyte B760M AORUS — $180 (LGA1700 / DDR4)</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="ram">⚡ RAM</label>
+                    <select id="ram">
+                        <option value="120" data-name="Corsair Vengeance DDR5" data-ram="DDR5">Corsair Vengeance DDR5 — $120</option>
+                        <option value="100" data-name="Kingston Fury DDR4" data-ram="DDR4">Kingston Fury DDR4 — $100</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="gpu">🎮 Graphics Card</label>
+                    <select id="gpu">
+                        <option value="550" data-name="NVIDIA RTX 4070" data-length="330" data-watts="200">NVIDIA RTX 4070 — $550 (330mm / 200W)</option>
+                        <option value="1600" data-name="NVIDIA RTX 4090" data-length="340" data-watts="450">NVIDIA RTX 4090 — $1,600 (340mm / 450W)</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="storage">📦 Storage</label>
+                    <select id="storage">
+                        <option value="150" data-name="Samsung 990 Pro 2TB" data-watts="5">Samsung 990 Pro 2TB — $150</option>
+                        <option value="35" data-name="Kingston NV2 1TB" data-watts="5">Kingston NV2 1TB — $35</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="psu">🔌 Power Supply</label>
+                    <select id="psu">
+                        <option value="100" data-name="Corsair RM750 750W" data-watts="750">Corsair RM750 750W — $100</option>
+                        <option value="40" data-name="EVGA 400W" data-watts="400">EVGA 400W — $40</option>
+                    </select>
+                </div>
+                <div class="builder-row">
+                    <label for="cooler">🧊 CPU Cooler</label>
+                    <select id="cooler">
+                        <option value="90" data-name="Noctua NH-D15" data-sockets="AM5,LGA1700">Noctua NH-D15 — $90 (AM5 / LGA1700)</option>
+                        <option value="40" data-name="Cooler Master Hyper 212" data-sockets="LGA1700">Cooler Master Hyper 212 — $40 (LGA1700 only)</option>
+                    </select>
+                </div>
+
+                <div class="builder-actions">
+                    <button class="button" id="checkBuild" type="button">Check My Build</button>
+                    <button class="button button-secondary" id="resetBuild" type="button">Reset Build</button>
+                </div>
+                <div id="buildFeedback" class="feedback" aria-live="polite">
+                    <strong>Ready when you are!</strong>
+                    <p>Pick your parts and click “Check My Build” to see if your squad is compatible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <div class="section-heading">
+                <p class="eyebrow">BONUS ROUND</p>
+                <h2>Quick PC Quiz</h2>
+                <p>Prove you're more than just the person who presses the power button.</p>
+            </div>
+            <div class="quiz-card">
+                <h3 id="question">Which component is mainly responsible for rendering game graphics?</h3>
+                <div id="answers" class="answers">
+                    <button type="button" data-correct="false">A. PSU</button>
+                    <button type="button" data-correct="true">B. GPU</button>
+                    <button type="button" data-correct="false">C. PC Case</button>
+                </div>
+                <p id="quizFeedback" aria-live="polite">Choose your answer!</p>
+                <button class="button" id="nextQuestion" type="button">Next Question</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Build-A-PC Arcade · Choose your parts. Check your build. Claim your builder status.</p>
+    </footer>
+
+    <script>
+        const componentIds = ["cpu", "motherboard", "ram", "gpu", "storage", "psu", "cooler"];
+        const money = amount => "$" + amount.toLocaleString("en-US");
+
+        function selected(id) {
+            const select = document.getElementById(id);
+            return select.options[select.selectedIndex];
+        }
+
+        function updateTotal() {
+            const total = componentIds.reduce((sum, id) => {
+                return sum + Number(document.getElementById(id).value);
+            }, 0);
+            document.getElementById("total").textContent = money(total);
+            return total;
+        }
+
+        componentIds.forEach(id => {
+            document.getElementById(id).addEventListener("change", () => {
+                updateTotal();
+                document.getElementById("buildFeedback").innerHTML =
+                    "<strong>Loadout updated!</strong><p>Check your build to see if all the parts work together.</p>";
+            });
+        });
+
+        document.getElementById("checkBuild").addEventListener("click", () => {
+            const issues = [];
+            const cpu = selected("cpu");
+            const motherboard = selected("motherboard");
+            const ram = selected("ram");
+            const gpu = selected("gpu");
+            const psu = selected("psu");
+            const cooler = selected("cooler");
+            const total = updateTotal();
+
+            if (cpu.dataset.socket !== motherboard.dataset.socket) {
+                issues.push("🧩 CPU and motherboard sockets don't match. They need the same socket type.");
+            }
+            if (motherboard.dataset.ram !== ram.dataset.ram) {
+                issues.push("⚡ RAM mismatch! Your motherboard needs " + motherboard.dataset.ram + " memory.");
+            }
+            if (Number(gpu.dataset.length) > 330) {
+                issues.push("📏 Your GPU is too long! The case clearance is 330mm.");
+            }
+            const powerDraw = 65 + 100 + 10 + Number(gpu.dataset.watts) +
+                Number(selected("storage").dataset.watts) + 25;
+            if (Number(psu.dataset.watts) < powerDraw) {
+                issues.push("🔋 Not enough power! Your parts need about " + powerDraw + "W, but this PSU supplies " + psu.dataset.watts + "W.");
+            }
+            if (!cooler.dataset.sockets.split(",").includes(cpu.dataset.socket)) {
+                issues.push("🧊 This cooler doesn't support your CPU socket.");
+            }
+
+            const feedback = document.getElementById("buildFeedback");
+            if (issues.length === 0) {
+                feedback.className = "feedback success";
+                feedback.innerHTML = "<strong>🎉 Build approved! You're a PC-building legend!</strong><p>Your selected parts pass these basic compatibility checks. Estimated total: " + money(total) + ".</p><p>Before buying, verify exact model specifications and your budget.</p>";
+            } else {
+                feedback.className = "feedback warning";
+                feedback.innerHTML = "<strong>🚧 Uh-oh! Your build needs a tune-up.</strong><ul>" +
+                    issues.map(issue => "<li>" + issue + "</li>").join("") +
+                    "</ul><p>Fix the issues and run the check again. You've got this!</p>";
+            }
+        });
+
+        document.getElementById("resetBuild").addEventListener("click", () => {
+            componentIds.forEach(id => {
+                document.getElementById(id).selectedIndex = 0;
+            });
+            updateTotal();
+            const feedback = document.getElementById("buildFeedback");
+            feedback.className = "feedback";
+            feedback.innerHTML = "<strong>Fresh start!</strong><p>Your build has been reset. Time to make a new loadout.</p>";
+        });
+
+        const questions = [
+            {
+                q: "Which component is mainly responsible for rendering game graphics?",
+                options: ["A. PSU", "B. GPU", "C. PC Case"],
+                answer: 1,
+                fact: "The GPU handles graphics processing. That's your pixel powerhouse!"
+            },
+            {
+                q: "Which component temporarily holds data for programs you're using?",
+                options: ["A. RAM", "B. Case Fan", "C. Storage SSD"],
+                answer: 0,
+                fact: "RAM is short-term memory for active tasks."
+            },
+            {
+                q: "What should you check before pairing a CPU with a motherboard?",
+                options: ["A. Their colors", "B. Their brand logos", "C. Socket compatibility"],
+                answer: 2,
+                fact: "The CPU socket must be supported by the motherboard."
+            },
+            {
+                q: "Which component supplies power to the PC?",
+                options: ["A. PSU", "B. RAM", "C. CPU Cooler"],
+                answer: 0,
+                fact: "The power supply unit provides power to the components."
+            }
+        ];
+
+        let questionIndex = 0;
+        let answered = false;
+
+        function renderQuestion() {
+            const item = questions[questionIndex];
+            answered = false;
+            document.getElementById("question").textContent = item.q;
+            document.getElementById("quizFeedback").textContent = "Choose your answer!";
+            const answers = document.getElementById("answers");
+            answers.innerHTML = "";
+            item.options.forEach((option, index) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.textContent = option;
+                button.addEventListener("click", () => {
+                    if (answered) return;
+                    answered = true;
+                    const feedback = document.getElementById("quizFeedback");
+                    if (index === item.answer) {
+                        feedback.textContent = "✅ Correct! " + item.fact;
+                        button.classList.add("correct");
+                    } else {
+                        feedback.textContent = "❌ Not quite! " + item.fact;
+                        button.classList.add("incorrect");
+                        answers.children[item.answer].classList.add("correct");
+                    }
+                });
+                answers.appendChild(button);
+            });
+        }
+
+        document.getElementById("nextQuestion").addEventListener("click", () => {
+            questionIndex = (questionIndex + 1) % questions.length;
+            renderQuestion();
+        });
+
+        updateTotal();
+        renderQuestion();
+    </script>
+</body>
+</html>
